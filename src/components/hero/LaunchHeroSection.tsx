@@ -37,7 +37,7 @@ export function LaunchHeroSection() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className={`relative flex justify-center ${isMobile ? 'mb-[-40px]' : 'mb-[-80px]'}`}>
+            className={`relative flex justify-center ${isMobile ? 'mb-[-80px]' : 'mb-[-80px]'}`}>
             {/* Glow behind image */}
             <div
               className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ${isMobile ? 'w-[400px] h-[400px]' : 'w-[600px] h-[600px]'} rounded-full blur-[120px]`}
