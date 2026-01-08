@@ -103,7 +103,7 @@ function ConversationAnimation() {
     {
       role: "ai",
       content:
-        "¡Hola! Encantado de ayudarte. ¿Cuántos agentes necesitas para tu equipo?",
+        "¡Hola! Encantado de ayudarle. ¿Cuántos agentes necesita para su equipo?",
       delay: 1000,
     },
     {
@@ -114,7 +114,7 @@ function ConversationAnimation() {
     {
       role: "ai",
       content:
-        "Perfecto. Para 15 agentes recomiendo nuestro plan Enterprise. ¿Cuál es tu principal desafío actual con leads?",
+        "Perfecto. Para 15 agentes recomiendo nuestro plan Enterprise. ¿Cuál es su principal desafío actual con leads?",
       delay: 1000,
     },
     {
@@ -126,7 +126,7 @@ function ConversationAnimation() {
     {
       role: "ai",
       content:
-        "Entiendo. Con nuestra IA, el tiempo de respuesta baja a menos de 5 segundos. ¿Te gustaría ver una demo personalizada?",
+        "Entiendo. Con nuestra IA, el tiempo de respuesta baja a menos de 5 segundos. ¿Le gustaría ver una demo personalizada?",
       delay: 1000,
     },
     {
@@ -137,7 +137,7 @@ function ConversationAnimation() {
     {
       role: "ai",
       content:
-        "¡Excelente! Tengo disponibilidad mañana a las 10:00 AM o 3:00 PM. ¿Cuál prefieres?",
+        "¡Excelente! Tengo disponibilidad mañana a las 10:00 AM o 3:00 PM. ¿Cuál prefiere?",
       delay: 1000,
     },
     {
@@ -148,7 +148,7 @@ function ConversationAnimation() {
     {
       role: "ai",
       content:
-        "✓ Reunión confirmada para mañana 10:00 AM. Te envié email con el link de Zoom. ¡Nos vemos!",
+        "✓ Reunión confirmada para mañana 10:00 AM. Le envié email con el link de Zoom. ¡Nos vemos!",
       delay: 1000,
     },
   ]);

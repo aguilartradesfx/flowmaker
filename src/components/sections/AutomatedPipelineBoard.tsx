@@ -289,7 +289,7 @@ export function AutomatedPipelineBoard() {
           </div>
           
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-            Tu pipeline{' '}
+            Su pipeline{' '}
             <span className="bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent">
               no debería quedarse quieto
             </span>

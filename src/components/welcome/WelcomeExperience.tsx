@@ -62,7 +62,7 @@ const CalendarScene = ({ onNext }: CalendarSceneProps) => {
       {/* Header text */}
       <div className="text-center mb-2">
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
-          Aumenta tus citas exponencialmente
+          Aumente sus citas exponencialmente
         </h2>
         <p className="text-white/50 text-sm">
           Agenda automática sin intervención manual
@@ -118,7 +118,7 @@ const PipelineScene = ({ onNext }: PipelineSceneProps) => {
       {/* Header text */}
       <div className="text-center mb-2">
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
-          Tu pipeline siempre actualizado
+          Su pipeline siempre actualizado
         </h2>
         <p className="text-white/50 text-sm">
           Seguimiento automático de cada oportunidad
@@ -176,7 +176,7 @@ const PlatformsScene = ({ onNext }: PlatformsSceneProps) => {
           Reemplaza múltiples herramientas
         </h2>
         <p className="text-white/50 text-sm">
-          Todo lo que necesitas en una sola plataforma
+          Todo lo que necesita en una sola plataforma
         </p>
       </div>
 
@@ -247,7 +247,7 @@ const WelcomeScene = ({ onContinue }: WelcomeSceneProps) => (
       Bienvenido
     </h1>
     <p className="text-white/60 text-center text-sm">
-      Tu equipo de ventas automatizado te espera
+      Su equipo de ventas automatizado le espera
     </p>
     <NextButton onClick={onContinue} label="Continuar →" />
   </div>

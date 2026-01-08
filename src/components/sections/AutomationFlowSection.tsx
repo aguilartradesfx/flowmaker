@@ -84,7 +84,7 @@ export function AutomationFlowSection() {
             {' '}en segundos
           </h2>
           <p className="text-xl text-gray-400">
-            Tu IA trabaja 24/7: responde, califica, agenda y sincroniza.
+            Su IA trabaja 24/7: responde, califica, agenda y sincroniza.
             Todo automático, todo en tiempo real.
           </p>
         </motion.div>

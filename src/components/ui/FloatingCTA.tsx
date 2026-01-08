@@ -5,11 +5,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { AnimatedCTAButton } from "@/components/ui/AnimatedCTAButton";
 import { ArrowRight, X } from "lucide-react";
 import { useMobileDetect } from "@/hooks/use-mobile-detect";
+import { useFormPopup } from "@/components/ui/FormPopup";
 
 export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
   const isMobile = useMobileDetect();
+  const { openPopup } = useFormPopup();
 
   useEffect(() => {
     let ticking = false;
@@ -49,20 +51,21 @@ export function FloatingCTA() {
 
           <div className="pr-8">
             <h3 className="text-base font-bold text-white mb-2">
-              ¿Listo/a para iniciar?
+              ¿Listo/a para el lanzamiento?
             </h3>
             <p className="text-sm text-gray-400 mb-3">
-              Hoy no tiene que pagar nada.
+              22 de Enero - 7:00 PM
             </p>
 
-            <a
-              href="https://checkout.bralto.io"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                openPopup();
+              }}
               className="block w-full py-2.5 px-4 text-center font-semibold text-white rounded-lg bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-400 hover:to-orange-500 transition-all"
             >
-              INICIAR PRUEBA GRATUITA
-            </a>
+              RESERVAR MI ESPACIO
+            </button>
           </div>
         </div>
       </div>
@@ -94,28 +97,29 @@ export function FloatingCTA() {
 
               <div className="pr-8">
                 <div className="flex items-center gap-2 mb-3">
-                  <div className="w-2 h-2 bg-green-500 rounded-full " />
-                  <span className="text-sm font-medium text-green-400">
-                    14 personas iniciaron hoy
+                  <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
+                  <span className="text-sm font-medium text-red-400">
+                    Evento en vivo - Cupos limitados
                   </span>
                 </div>
 
                 <h3 className="text-lg font-bold text-white mb-2">
-                  ¿Listo/a para iniciar?
+                  ¿Listo/a para el lanzamiento?
                 </h3>
                 <p className="text-sm text-gray-400 mb-4">
-                  Hoy no tiene que pagar nada.
+                  22 de Enero - 7:00 PM
                 </p>
 
                 <AnimatedCTAButton
-                  href="https://checkout.bralto.io"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    openPopup();
+                  }}
                   size="sm"
                   className="w-full"
                 >
                   <span className="flex items-center justify-center gap-2">
-                    INICIAR PRUEBA GRATUITA
+                    RESERVAR MI ESPACIO
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </AnimatedCTAButton>

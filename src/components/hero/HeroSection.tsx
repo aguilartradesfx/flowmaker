@@ -42,7 +42,7 @@ export function HeroSection() {
               Agentes de IA que
             </span>
             <br />
-            <span className="text-white">transforman tu negocio</span>
+            <span className="text-white">transforman su negocio</span>
           </motion.h1>
 
           <motion.p
@@ -52,7 +52,7 @@ export function HeroSection() {
             className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
           >
             Respuesta instantánea 24/7, calificación automática de leads y
-            conversión que nunca duerme. Tu equipo potenciado con inteligencia
+            conversión que nunca duerme. Su equipo potenciado con inteligencia
             artificial enterprise.
           </motion.p>
 
@@ -70,7 +70,7 @@ export function HeroSection() {
               className="px-8 py-6 text-lg"
             >
               <span className="flex items-center gap-2">
-                Reservar Demo Gratuita
+                Reserve su Demo Gratuita
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </span>
             </AnimatedCTAButton>

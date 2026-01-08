@@ -8,7 +8,7 @@ interface AnimatedCTAButtonProps {
   children: ReactNode;
   className?: string;
   size?: 'sm' | 'lg' | 'default';
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => void;
   href?: string;
   target?: string;
   rel?: string;
@@ -75,7 +75,7 @@ export function AnimatedCTAButton({
 
   if (href) {
     return (
-      <a href={href} target={target} rel={rel} className="inline-block">
+      <a href={href} target={target} rel={rel} onClick={onClick} className="inline-block">
         {buttonContent}
       </a>
     );

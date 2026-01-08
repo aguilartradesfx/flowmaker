@@ -3,21 +3,20 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { useFormPopup } from "@/components/ui/FormPopup";
 
 const navItems = [
   { label: "Inicio", href: "#hero" },
-  { label: "Cómo Funciona", href: "#como-funciona" },
+  { label: "¿Para quién?", href: "#para-quien" },
+  { label: "Beneficios", href: "#con-sin-bralto" },
+  { label: "Qué aprenderá", href: "#que-aprenderas" },
   { label: "Características", href: "#caracteristicas" },
-  { label: "Centralización", href: "#centralizacion" },
-  { label: "Done For You", href: "#done-for-you" },
-  { label: "Precios", href: "#precios" },
-  { label: "Pipeline", href: "#pipeline" },
-  { label: "Contacto", href: "#contacto" },
 ];
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { openPopup } = useFormPopup();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -87,10 +86,11 @@ export function Navbar() {
             </div>
 
             {/* CTA Button - Desktop */}
-            <motion.a
-              href="https://checkout.bralto.io"
-              target="_blank"
-              rel="noopener noreferrer"
+            <motion.button
+              onClick={(e) => {
+                e.preventDefault();
+                openPopup();
+              }}
               className="hidden lg:inline-flex items-center px-5 py-2.5 rounded-lg text-sm font-semibold text-white transition-all duration-300"
               style={{
                 background: "linear-gradient(135deg, #F97316 0%, #DB2777 100%)",
@@ -102,8 +102,8 @@ export function Navbar() {
               }}
               whileTap={{ scale: 0.95 }}
             >
-              Empezar Ahora
-            </motion.a>
+              Reservar Lugar
+            </motion.button>
 
             {/* Mobile Menu Button */}
             <button
@@ -144,10 +144,12 @@ export function Navbar() {
                     {item.label}
                   </motion.a>
                 ))}
-                <motion.a
-                  href="https://checkout.bralto.io"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <motion.button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsMobileMenuOpen(false);
+                    openPopup();
+                  }}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: navItems.length * 0.05 }}
@@ -157,8 +159,8 @@ export function Navbar() {
                       "linear-gradient(135deg, #F97316 0%, #DB2777 100%)",
                   }}
                 >
-                  Empezar Ahora
-                </motion.a>
+                  Reservar Lugar
+                </motion.button>
               </div>
             </div>
           </motion.div>

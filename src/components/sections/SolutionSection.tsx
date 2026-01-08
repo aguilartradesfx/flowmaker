@@ -54,8 +54,8 @@ export function SolutionSection() {
             </span>
           </h2>
           <p className="text-xl text-gray-400">
-            Todos tus canales en un solo lugar. IA que responde, califica y
-            agenda automáticamente. 24/7, en tu idioma.
+            Todos sus canales en un solo lugar. IA que responde, califica y
+            agenda automáticamente. 24/7, en su idioma.
           </p>
         </motion.div>
 

@@ -21,7 +21,7 @@ export function ProblemSection() {
       icon: TrendingUp,
       metric: '33%',
       label: 'Más leads convertidos',
-      description: 'Capturamos leads mientras tu competencia duerme',
+      description: 'Capturamos leads mientras su competencia duerme',
       color: 'from-electric/20 to-violet/20',
       iconColor: 'text-electric'
     },
@@ -60,8 +60,8 @@ export function ProblemSection() {
             </span>
           </h2>
           <p className="text-xl text-gray-400">
-            Con IA disponible 24/7, nunca pierdes una oportunidad.
-            Mientras tu competencia duerme, tú estás cerrando deals.
+            Con IA disponible 24/7, nunca pierde una oportunidad.
+            Mientras su competencia duerme, usted está cerrando deals.
           </p>
         </motion.div>
 

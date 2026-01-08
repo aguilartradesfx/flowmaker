@@ -39,11 +39,11 @@ export function IntegrationsSection() {
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Se conecta con{' '}
             <span className="bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent">
-              tu stack actual
+              su stack actual
             </span>
           </h2>
           <p className="text-xl text-gray-400">
-            Sincronización bidireccional en tiempo real con tus herramientas favoritas
+            Sincronización bidireccional en tiempo real con sus herramientas favoritas
           </p>
         </motion.div>
 

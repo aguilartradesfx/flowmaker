@@ -123,7 +123,7 @@ export function MetricsSection() {
             </span>
           </h2>
           <p className="text-xl text-gray-400">
-            Mejora real en métricas que impactan directamente tu bottom line
+            Mejora real en métricas que impactan directamente su bottom line
           </p>
         </motion.div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">

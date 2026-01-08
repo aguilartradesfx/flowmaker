@@ -4,7 +4,11 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
 import { Calendar } from "lucide-react";
 
-export function FormSection() {
+interface FormSectionProps {
+  id?: string;
+}
+
+export function FormSection({ id }: FormSectionProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -21,7 +25,7 @@ export function FormSection() {
   }, []);
 
   return (
-    <section id="contacto" ref={ref} className="relative py-32 bg-black overflow-hidden">
+    <section id={id || "contacto"} ref={ref} className="relative py-32 bg-black overflow-hidden">
       <div className="absolute inset-0 bg-noise" />
       {/* Gradient accents */}
       <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-white/3 rounded-full blur-[120px]" />
@@ -33,18 +37,18 @@ export function FormSection() {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto text-center mb-16"
         >
-          <span className="inline-block px-4 py-2 rounded-full bg-white/3 border border-white/10 text-white text-sm font-medium mb-6">
-            Agenda tu Demo
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/3 border border-white/10 text-white text-sm font-medium mb-6">
+            <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+            Evento en Vivo - 22 de Enero
           </span>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Transforma tu negocio{" "}
-            <span className="bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent">
-              en 30 minutos
+            Reservar mi lugar{" "}
+            <span className="bg-gradient-to-r from-orange-400 via-pink-500 to-purple-500 bg-clip-text text-transparent">
+              GRATIS
             </span>
           </h2>
           <p className="text-xl text-gray-400">
-            Completa el formulario y recibe una demo personalizada para tu
-            industria
+            Complete el formulario y asegure su acceso al lanzamiento exclusivo de Bralto el 22 de Enero a las 7:00 PM
           </p>
         </motion.div>
 
@@ -68,9 +72,9 @@ export function FormSection() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-white">
-                      Pruebe el sistema en este momento
+                      Registre su asistencia
                     </h3>
-                    <p className="text-sm text-gray-400">Solo toma 2 minutos</p>
+                    <p className="text-sm text-gray-400">Solo toma 30 segundos</p>
                   </div>
                 </div>
               </div>

@@ -19,15 +19,15 @@ export function ConversationSimulation() {
 
   const conversationRef = useRef<Message[]>([
     { role: 'user', content: 'Hola, quisiera información sobre sus planes empresariales', delay: 0 },
-    { role: 'ai', content: '¡Hola! Encantado de ayudarte. ¿Cuántos agentes necesitas para tu equipo?', delay: 1000 },
+    { role: 'ai', content: '¡Hola! Encantado de ayudarle. ¿Cuántos agentes necesita para su equipo?', delay: 1000 },
     { role: 'user', content: 'Somos un equipo de ventas de 15 personas', delay: 2000 },
-    { role: 'ai', content: 'Perfecto. Para 15 agentes recomiendo nuestro plan Enterprise. ¿Cuál es tu principal desafío actual con leads?', delay: 1000 },
+    { role: 'ai', content: 'Perfecto. Para 15 agentes recomiendo nuestro plan Enterprise. ¿Cuál es su principal desafío actual con leads?', delay: 1000 },
     { role: 'user', content: 'Perdemos muchos leads porque no respondemos lo suficientemente rápido', delay: 2000 },
-    { role: 'ai', content: 'Entiendo. Con nuestra IA, el tiempo de respuesta baja a menos de 5 segundos. ¿Te gustaría ver una demo personalizada?', delay: 1000 },
+    { role: 'ai', content: 'Entiendo. Con nuestra IA, el tiempo de respuesta baja a menos de 5 segundos. ¿Le gustaría ver una demo personalizada?', delay: 1000 },
     { role: 'user', content: 'Sí, me interesa. ¿Cuándo podríamos agendar?', delay: 1500 },
-    { role: 'ai', content: '¡Excelente! Tengo disponibilidad mañana a las 10:00 AM o 3:00 PM. ¿Cuál prefieres?', delay: 1000 },
+    { role: 'ai', content: '¡Excelente! Tengo disponibilidad mañana a las 10:00 AM o 3:00 PM. ¿Cuál prefiere?', delay: 1000 },
     { role: 'user', content: 'Mañana a las 10:00 AM está perfecto', delay: 1500 },
-    { role: 'ai', content: '✓ Reunión confirmada para mañana 10:00 AM. Te envié email con el link de Zoom. ¡Nos vemos!', delay: 1000 }
+    { role: 'ai', content: '✓ Reunión confirmada para mañana 10:00 AM. Le envié email con el link de Zoom. ¡Nos vemos!', delay: 1000 }
   ]);
 
   const conversation = conversationRef.current;
@@ -94,7 +94,7 @@ export function ConversationSimulation() {
             IA en Acción
           </span>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Mira cómo la IA{' '}
+            Mire cómo la IA{' '}
             <span className="bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent">
               convierte una consulta
             </span>
