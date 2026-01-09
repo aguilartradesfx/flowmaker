@@ -68,12 +68,19 @@ function SocialProofSection() {
 export default function VSLPage() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
+  const [showButton, setShowButton] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handlePlayClick = () => {
     if (videoRef.current) {
       setIsPlaying(true);
       videoRef.current.play();
+    }
+  };
+
+  const handleTimeUpdate = () => {
+    if (videoRef.current && videoRef.current.currentTime >= 30) {
+      setShowButton(true);
     }
   };
 
@@ -168,6 +175,7 @@ export default function VSLPage() {
                     className="w-full h-full object-cover"
                     loop
                     playsInline
+                    onTimeUpdate={handleTimeUpdate}
                     muted={isMuted}
                     preload="metadata"
                   >
@@ -213,22 +221,24 @@ export default function VSLPage() {
             </motion.div>
 
             {/* CTA */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex justify-center"
-            >
-              <AnimatedCTAButton
-                href="https://forms.google.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                size="lg"
-                className="px-8 md:px-12 py-5 md:py-6 text-base md:text-lg"
+            {showButton && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="flex justify-center"
               >
-                LLENAR ENCUESTA PARA UNIRME AL GRUPO
-              </AnimatedCTAButton>
-            </motion.div>
+                <AnimatedCTAButton
+                  href="https://api.whatsapp.com/send?phone=12138567800&text=¡Quiero%20completar%20mi%20registro!%20🚀"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  size="lg"
+                  className="px-8 md:px-12 py-5 md:py-6 text-base md:text-lg"
+                >
+                  LLENAR ENCUESTA PARA UNIRME AL GRUPO
+                </AnimatedCTAButton>
+              </motion.div>
+            )}
           </div>
         </div>
       </section>

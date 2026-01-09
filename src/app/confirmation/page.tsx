@@ -21,9 +21,9 @@ export default function ConfirmationPage() {
   const [flipTicket, setFlipTicket] = useState(false);
   const [confirmationCode, setConfirmationCode] = useState("BRALTO-XXXXXX");
 
-  const eventDate = "22 de Enero, 2025";
-  const eventTime = "7:00 PM EST";
-  const eventLocation = "El enlace será enviado por WhatsApp";
+  const eventDate = "15 de Enero, 2025";
+  const eventTime = "3:00 PM EST";
+  const eventLocation = "Evento Virtual en Vivo";
 
   useEffect(() => {
     setConfirmationCode(generatePersistentCode());
@@ -351,28 +351,7 @@ export default function ConfirmationPage() {
           </p>
         </motion.div>
 
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.7 }}
-          className="text-center mt-12"
-        >
-          <motion.a
-            href="https://api.whatsapp.com/send?phone=12138567800&text=¡Ya%20tengo%20mi%20ticket!%20🎟️"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-orange-500 to-pink-600 text-white font-semibold text-lg shadow-lg hover:shadow-2xl transition-all"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Confirmar en WhatsApp
-            <ArrowRight className="w-5 h-5" />
-          </motion.a>
-          <p className="text-gray-500 text-sm mt-4">
-            ¿Necesita ayuda? Contáctenos por WhatsApp
-          </p>
-        </motion.div>
+
       </div>
 
       <style jsx>{`
