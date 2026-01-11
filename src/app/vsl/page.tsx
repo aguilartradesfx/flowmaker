@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { AnimatedBackground } from "@/components/hero/AnimatedBackground";
 import { AnimatedCTAButton } from "@/components/ui/AnimatedCTAButton";
 import { Play, Volume2, VolumeX, Star, AlertTriangle } from "lucide-react";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const testimonials = [
   {
@@ -79,10 +79,27 @@ export default function VSLPage() {
   };
 
   const handleTimeUpdate = () => {
-    if (videoRef.current && videoRef.current.currentTime >= 30) {
+    if (videoRef.current && videoRef.current.currentTime >= 57) {
       setShowButton(true);
     }
   };
+
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (videoRef.current) {
+        if (document.hidden) {
+          videoRef.current.pause();
+        } else if (isPlaying) {
+          videoRef.current.play();
+        }
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, [isPlaying]);
 
   return (
     <main className="min-h-screen bg-[#0A0A0A]">
@@ -180,7 +197,7 @@ export default function VSLPage() {
                     preload="metadata"
                   >
                     <source
-                      src="https://storage.googleapis.com/msgsndr/hdVpvshZP3RGJQbxx8GA/media/6823c96d77a9d49b97e32a90.mp4"
+                      src="https://storage.googleapis.com/msgsndr/hdVpvshZP3RGJQbxx8GA/media/69606d7bd3eb0480dddfb82e.mp4"
                       type="video/mp4"
                     />
                   </video>
@@ -235,7 +252,7 @@ export default function VSLPage() {
                   size="lg"
                   className="px-8 md:px-12 py-5 md:py-6 text-base md:text-lg"
                 >
-                  LLENAR ENCUESTA PARA UNIRME AL GRUPO
+                  COMPLETAR MI REGISTRO EN WPP
                 </AnimatedCTAButton>
               </motion.div>
             )}
