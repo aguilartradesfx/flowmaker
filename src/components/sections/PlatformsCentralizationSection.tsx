@@ -4,6 +4,7 @@ import React, { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Check, X, DollarSign, Zap, TrendingUp } from "lucide-react";
 import { AnimatedCTAButton } from "@/components/ui/AnimatedCTAButton";
+import { useFormPopup } from "@/components/ui/FormPopup";
 
 interface PlatformRow {
   function: string;
@@ -116,6 +117,7 @@ export function PlatformsCentralizationSection() {
   const [viewMode, setViewMode] = useState<"bralto" | "separado">("bralto");
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
+  const { openPopup } = useFormPopup();
 
   return (
     <section
@@ -404,13 +406,11 @@ export function PlatformsCentralizationSection() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <AnimatedCTAButton
-                href="https://checkout.bralto.io"
-                target="_blank"
-                rel="noopener noreferrer"
+                onClick={openPopup}
                 size="lg"
                 className="px-8"
               >
-                Iniciar prueba gratuita
+                Reserve su espacio
               </AnimatedCTAButton>
             </div>
           </div>

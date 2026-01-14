@@ -1,5 +1,6 @@
 "use client";
 import { LaunchHeroSection } from "@/components/hero/LaunchHeroSection";
+import { BraltoFlowmakerIntro } from "@/components/sections/BraltoFlowmakerIntro";
 import { WhatYouWillLearnSection } from "@/components/sections/WhatYouWillLearnSection";
 import { WhyAISystemsSection } from "@/components/sections/WhyAISystemsSection";
 import { EventDateSection } from "@/components/sections/EventDateSection";
@@ -12,13 +13,18 @@ import { TrustSection } from "@/components/sections/TrustSection";
 import { FloatingCTA } from "@/components/ui/FloatingCTA";
 import { VoiceWidget } from "@/components/VoiceWidget";
 import { FormPopupProvider } from "@/components/ui/FormPopup";
+import { RouteGuard } from "@/components/RouteGuard";
 
 export default function Page() {
   return (
     <FormPopupProvider>
-      <main className="min-h-screen bg-black">
+      <RouteGuard>
+        <main className="min-h-screen bg-black">
         {/* Hero - Lanzamiento 22 de Enero */}
         <LaunchHeroSection />
+        
+        {/* Qué son Bralto y Flowmaker */}
+        <BraltoFlowmakerIntro />
         
         {/* Lo que aprenderás en el evento */}
         <WhatYouWillLearnSection />
@@ -53,6 +59,7 @@ export default function Page() {
         <FloatingCTA />
         <VoiceWidget />
       </main>
+      </RouteGuard>
     </FormPopupProvider>
   );
 }

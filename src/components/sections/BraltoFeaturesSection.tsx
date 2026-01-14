@@ -25,6 +25,7 @@ import {
   Zap,
 } from "lucide-react";
 import { AnimatedCTAButton } from "@/components/ui/AnimatedCTAButton";
+import { useFormPopup } from "@/components/ui/FormPopup";
 
 // Capabilities for tabs (excluding AI agents which stays as hero)
 const CAPABILITIES = [
@@ -742,6 +743,8 @@ function CapabilitiesTabs() {
 }
 
 export function BraltoFeaturesSection() {
+  const { openPopup } = useFormPopup();
+  
   return (
     <section id="caracteristicas" className="relative py-16 overflow-hidden bg-gradient-to-b from-black via-[#0D0D0D] to-black">
       <div className="absolute inset-0 bg-noise opacity-20" />
@@ -787,16 +790,14 @@ export function BraltoFeaturesSection() {
           className="text-center mt-12"
         >
           <AnimatedCTAButton
-            href="https://checkout.bralto.io"
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={openPopup}
             size="lg"
             className="px-8 py-5 text-base"
           >
-            INICIAR PRUEBA GRATUITA
+            RESERVE SU ESPACIO
           </AnimatedCTAButton>
           <p className="text-xs text-gray-500 mt-3">
-            Hoy paga $0 – Pruebe el sistema antes de pagarlo
+            Evento exclusivo del 22 de enero
           </p>
         </motion.div>
       </div>

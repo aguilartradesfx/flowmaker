@@ -6,12 +6,14 @@ import { AnimatedCTAButton } from "@/components/ui/AnimatedCTAButton";
 import { Play, Volume2, VolumeX } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { useMobileDetect } from "@/hooks/use-mobile-detect";
+import { useFormPopup } from "@/components/ui/FormPopup";
 
 export function BraltoHeroSection() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const isMobile = useMobileDetect();
+  const { openPopup } = useFormPopup();
 
   useEffect(() => {
     const video = videoRef.current;
@@ -278,13 +280,11 @@ export function BraltoHeroSection() {
               className="flex flex-col items-center space-y-4"
             >
               <AnimatedCTAButton
-                href="https://checkout.bralto.io"
-                target="_blank"
-                rel="noopener noreferrer"
+                onClick={openPopup}
                 size="lg"
                 className="px-8 py-6 text-base md:text-lg"
               >
-                INICIE SU PRUEBA GRATUITA DE 14 DÍAS
+                RESERVE SU ESPACIO AHORA
               </AnimatedCTAButton>
             </motion.div>
 
