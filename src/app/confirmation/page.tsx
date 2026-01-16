@@ -21,8 +21,8 @@ export default function ConfirmationPage() {
   const [flipTicket, setFlipTicket] = useState(false);
   const [confirmationCode, setConfirmationCode] = useState("BRALTO-XXXXXX");
 
-  const eventDate = "15 de Enero, 2025";
-  const eventTime = "3:00 PM EST";
+  const eventDate = "22 de Enero, 2025";
+  const eventTime = "7:00 PM EST";
   const eventLocation = "Evento Virtual en Vivo";
 
   useEffect(() => {
